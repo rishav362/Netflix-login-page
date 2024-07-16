@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.svg-icon{
+    fill: #e50914;
+    height: 90px;
+    width: 160px;
+    position: fixed;
+}
+
+nav{
+    padding: 25px 60px;
+}
+
+body{
+    background-color: #000;
+}
+
+body::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: url(bg.jpeg);
+    background-position: fixed;
+    opacity: 0.5;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.form-wrapper{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 450px;
+    padding: 60px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,0.75);
+    border-radius: 4px;
+}
+
+.form-wrapper h2{
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+.form-wrapper form {
+    margin: 25px 0px 65px;
+}
+
+form .form-control{
+    position: relative;
+    height: 50px;
+    margin-bottom: 16px;
+}
+
+.form-control input{
+    height: 100%;
+    width: 100%;
+    background: #333;
+    outline: none;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    padding: 0px 20px;
+}
+
+.form-control input:is(:focus, :valid){
+    padding: 16px 20px 0px;
+    background: #444;
+}
+
+.form-control label{
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    color: #8c8c8c;
+    pointer-events: none;
+    font-size: 1rem;
+    transform: translateY(-50%);
+    transition: all 0.1s ease;
+}
+
+.form-control input:is(:focus, :valid) ~label{
+    font-size: 0.75rem;
+    transform: translateY(-130%);
+}
+
+form button{
+    width: 100%;
+    padding: 16px 0px;
+    background-color: #e50914;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+    margin: 25px 0px 10px;
+    color: #fff;
+    transition: 0.1s ease;
+}
+
+form button:hover{
+    background: #c40812;
+}
+
+form .help{
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.form-wrapper :where(label,a){
+    font-size: 0.9rem;
+}
+
+.form-wrapper :where(label,p,small,a){
+    color: #b3b3b3;
+}
+
+form .remember-me{
+    display: flex;
+}
+
+form .remember-me input{
+    margin-right: 5px;
+    accent-color: #b3b3b3;
+}
+
+.form-wrapper p a{
+    color: #fff;
+}
+
+.form-wrapper small{
+    display: block;
+    margin-top: 15px;
+}
+
+.form-wrapper small a{
+    color: #0071eb;
+}
+
+.form-wrapper a{
+    text-decoration: none;
+}
+
+.form-wrapper a:hover{
+    text-decoration: underline;
+}
+
+@media (max-width: 740px){
+    nav, .form-wrapper{
+        padding: 20px;
+    }
+    nav a img{
+        width: 140px;
+    }
+    .form-wrapper{
+        width: 100%;
+        top: 43%
+    }
+    .form-wrapper form{
+        margin: 25px 0px 40px;
+    }
+}
